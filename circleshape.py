@@ -1,5 +1,3 @@
-from turtle import radians
-
 import pygame
 
 # Base class for game objects
@@ -25,5 +23,5 @@ class CircleShape(pygame.sprite.Sprite):
         # must override
         pass
 
-    def collides_with(self, other) -> None:
+    def collides_with(self, other) -> bool:
         return self.position.distance_to(other.position) <= self.radius + other.radius
